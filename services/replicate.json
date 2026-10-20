@@ -1,0 +1,8 @@
+{
+  "protocol": "replicate",
+  "label": "Replicate",
+  "key_env": "REPLICATE_API_TOKEN",
+  "settings": {
+    "confirm_over": 1.0
+  }
+}

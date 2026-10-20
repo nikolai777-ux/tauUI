@@ -1,0 +1,9 @@
+tauUI - credits
+===============
+
+Aslan Zamaev - design, direction, testing
+Built with Claude (Anthropic) as coding partner.
+
+Thanks for advice and ideas:
+  Tamerlan Zamaev
+  Zulia Shavaeva

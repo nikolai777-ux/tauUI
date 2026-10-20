@@ -1,0 +1,2 @@
+﻿# The editor itself only needs Qt. AI models run in their own Python environments (set on each Model node).
+PySide6

@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.venv/
+build_env/
+build/
+dist/
+logs/
+output/
+autosave/
+online_models/.cache/
+settings_import*.json

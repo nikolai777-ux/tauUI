@@ -1,0 +1,36 @@
+tauUI - third-party software
+============================
+
+tauUI is licensed under the GNU General Public License v3 (LICENSE).
+
+Bundled with the Windows build (the .exe folder)
+------------------------------------------------
+Qt for Python (PySide6, shiboken6) and the Qt 6 libraries it ships
+  (c) The Qt Company Ltd. and other contributors - https://www.qt.io
+  Qt Core, Gui, Widgets, Network, Multimedia, Multimedia Widgets, Pdf, Qml, Quick, Quick Widgets:
+    GNU Lesser General Public License v3 (licenses/LGPL-3.0.txt)
+  Qt Quick 3D (the 3D viewer) and its asset converter "balsam":
+    GNU General Public License v3 (licenses/GPL-3.0.txt)
+  Qt's own third-party parts (FFmpeg in Qt Multimedia, PDFium in Qt Pdf, Assimp in Qt Quick 3D, and others)
+  are listed with their licences in the PySide6 package: Lib/site-packages/PySide6/ and
+  https://doc.qt.io/qt-6/licenses-used-in-qt.html
+  The Qt libraries are used unmodified and stay separate, replaceable files in the build folder.
+  Source code of Qt: https://download.qt.io/official_releases/qt/
+  Source code of PySide6: https://code.qt.io/cgit/pyside/pyside-setup.git/
+
+Python (the interpreter embedded in the .exe)
+  Python Software Foundation License - https://docs.python.org/3/license.html
+
+comtypes (Windows spell checker access)
+  MIT License - https://github.com/enthought/comtypes
+
+Included in the source
+----------------------
+node_editor/engine/assets/qwen_tokenizer/ - tokenizer files from Qwen (Alibaba Cloud), Apache License 2.0
+  https://huggingface.co/Qwen
+
+NOT included - installed separately by the user if wanted
+---------------------------------------------------------
+AI models (each under its own licence - check it before use, some are non-commercial only)
+PyTorch, diffusers, transformers and other libraries in the user's model environment
+ffmpeg, Blender, stable-diffusion.cpp, Claude Code, and any online service accounts

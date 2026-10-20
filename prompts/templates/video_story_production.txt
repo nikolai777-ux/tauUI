@@ -1,0 +1,45 @@
+Method: making a story video (several shots, characters, places, dialogue, music). A preferred way of working, after how films and animated features are made - adapt it to the request. For the pictures in it, the pictures template (prompts\templates\pictures.txt) applies too; for picking models, choosing_models.txt. A story told with still pictures only: still_story.txt.
+
+1. Story and plan (before anything is rendered)
+- Script, then a shot list: for each shot its purpose, length, who, where, camera (size, angle, movement), action, dialogue, sound. Add up the lengths against the length asked for. Agree it with the user.
+- For each shot, write its checklist now (likeness, costume, props, place, light, screen direction, camera, motion, sound) - fixed before seeing results.
+- Say the risks up front: what may look wrong, what costs most, what takes long.
+
+2. Look development
+- A model sheet per character (front, side, back from one approved front; face close-up) and a reference per place and key prop - reused by every shot.
+- A short look guide: palette, light per scene (time of day, where the light comes from), style. Every shot prompt follows it.
+
+3. Layout in 3D - REQUIRED (a strict rule of the user, 2026-10-08 - not a preference; details in pictures.txt "3D LAYOUT FIRST")
+- Lay the film out in a 3D model first (Blender, Houdini or Maya), in metres: the sets built once, the main props, stand-ins for every character at true size where they stand and move, and a camera per shot (full-frame focal lengths). It fixes what generated pictures can't keep on their own: the same room from every angle, distances, heights, scale, where the light comes from, screen direction.
+- Render each shot's layout (a still or a short camera move) + its JSON and generate the shot's picture / start and end frames FROM it (layout as image 1, "keep its framing exactly", stand-ins replaced by the characters from the references); check every result against its layout.
+- No 3D program available: stop and tell the user - never fall back to master pictures or words on your own.
+
+4. Story reel (animatic) before paying for video
+- One picture per shot (local models), timed to the shot list, with scratch voice (text to speech) and temporary music, cut together. The user reviews the length, pacing and order here - changes are cheap now, expensive later.
+
+5. Shots
+- One tab per shot (shared work - references, sets, voices - in its own tabs). Build one shot completely, test it, fix it; then copy_nodes it for the others and change what differs.
+- Continuity as a script supervisor keeps it: the 180-degree line between characters, eyelines that meet, screen direction kept across cuts (who moves left to right keeps doing so), the same costume, props, hair and light from shot to shot. Note per shot what the next one must match.
+- Dialogue first: voices are recorded (generated) before the shots that show them speaking, so the shot length follows the line; lip sync after the take is approved.
+- Paid jobs in waves: a few, judged, then the rest; stop_render the rest if the first show a shared mistake.
+
+6. Review (dailies)
+- Every take is a version: numbered (shot_v001, _v002...), kept, never overwritten or moved. Each gets a judgement against its checklist and a status: pending review / needs fix (with notes) / approved.
+- Judges by what must be perceived: a model that watches the video (motion, continuity, camera, extra limbs or people), one that listens (speech against the script, accent, music fit, sync), still frames for fine detail (faces against their model sheet). One shot per check, problems worst first. Check again after every change (a trim, lip sync, a new take).
+- Body counts follow the story: heads, eyes, ears, arms, hands, fingers, legs, feet, horns, tails, wings of every person and animal as the story gives them; where it says nothing, the normal number for that kind of being. Check on enlarged stills from the start, middle and end of each shot and wherever a figure turns or overlaps another (limbs multiply and merge in motion), with a separate counting-only question to the judge.
+
+7. Production table
+- Keep one: shot, status, versions with the approved one, cost, open notes. Update it as you go and read it back instead of relying on memory (a file in the output folder unless the app gives you one).
+
+8. Edit and sound
+- Assembly (approved shots in order) → rough cut (timing) → fine cut → picture lock. Check the cut as a whole: length against the request, pacing, continuity across cuts.
+- Sound after picture lock: dialogue cleaned and levelled; effects and Foley for what is seen; music fitted to the locked cut; mixed so the words stay clear, at the loudness of where it goes (online about -14 LUFS, broadcast -23 / -24) - measured, not guessed. Keep dialogue, music and effects as separate stems.
+
+9. Helpers (other models working for you)
+- A watcher for reference films: it watches a clip and returns a shot breakdown (shots, sizes, moves, timings) to borrow from.
+- Writers for bulk text: all shot prompts from the shot list and look guide in one go, dialogue lines, translations (a model trained for the language when there is one) - you check and correct them.
+- Judges as in 6, from another model family than yours where possible; a cheap one for every take, a strong one when they disagree or before approval.
+- Keep briefs short and answers in a fixed form (status, problems worst first, files); run them side by side.
+
+10. Closing report
+- Each shot's state, the problems still open, what was spent per service, and where the film falls short of the request (length, quality, what was dropped).

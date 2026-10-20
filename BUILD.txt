@@ -1,0 +1,25 @@
+Building the Windows .exe
+=========================
+
+Needs: Windows 10/11, Python 3.12+ (built with 3.14), about 1.5 GB free.
+
+1. Make a separate build environment (keeps your own Python clean):
+     python -m venv build_env
+     build_env\Scripts\pip install PySide6==6.11.2 comtypes pyinstaller
+
+2. From this folder (the one with main.py and tauUI.spec):
+     build_env\Scripts\pyinstaller --noconfirm tauUI.spec
+
+3. The app is dist\tauUI\  - start dist\tauUI\tauUI.exe. Zip the whole folder to share it.
+
+Notes
+- One folder, not one file: the Qt libraries stay separate, replaceable DLLs (LGPL), and the model workers
+  (node_editor\engine\*.py) must exist as files - they run inside each user's own model Python environment.
+- The build contains no AI models, PyTorch or model libraries; users install those in their own environment and
+  pick it in File > Preferences > Default Python env...
+- The exe also serves as the Executor's tool relay ("tauUI.exe --mcp-server"), since a built app has no separate
+  Python to run node_editor\mcp_server.py with.
+
+Sharing the build (GPLv3)
+- Give the source together with the .exe (this folder zipped is enough), or a link to where the same source is
+  published. Keep LICENSE, THIRD_PARTY_NOTICES.txt and the licenses folder in the build folder.

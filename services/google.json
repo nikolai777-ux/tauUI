@@ -1,0 +1,575 @@
+{
+ "protocol": "google",
+ "label": "Google AI Studio",
+ "key_env": "GEMINI_API_KEY",
+ "settings": {
+  "confirm_over": 1.0,
+  "prices": {
+   "_source": "https://ai.google.dev/gemini-api/docs/pricing (read 2026-10-02; edit here when Google changes them)",
+   "gemini-3.8-flash": {
+    "tiers": [
+     {
+      "title": "",
+      "criteria": [],
+      "prices": [
+       {
+        "price": 7.5e-07,
+        "metric": "input_tokens",
+        "unit": "input token",
+        "title": "$0.75 per 1M input tokens"
+       },
+       {
+        "price": 3.75e-06,
+        "metric": "output_tokens",
+        "unit": "output token",
+        "title": "$3.75 per 1M output tokens"
+       }
+      ]
+     }
+    ]
+   },
+   "gemini-3.7-flash": {
+    "tiers": [
+     {
+      "title": "",
+      "criteria": [],
+      "prices": [
+       {
+        "price": 7.5e-07,
+        "metric": "input_tokens",
+        "unit": "input token",
+        "title": "$0.75 per 1M input tokens"
+       },
+       {
+        "price": 3.75e-06,
+        "metric": "output_tokens",
+        "unit": "output token",
+        "title": "$3.75 per 1M output tokens"
+       }
+      ]
+     }
+    ]
+   },
+   "gemini-3.6-flash": {
+    "tiers": [
+     {
+      "title": "",
+      "criteria": [],
+      "prices": [
+       {
+        "price": 7.5e-07,
+        "metric": "input_tokens",
+        "unit": "input token",
+        "title": "$0.75 per 1M input tokens"
+       },
+       {
+        "price": 3.75e-06,
+        "metric": "output_tokens",
+        "unit": "output token",
+        "title": "$3.75 per 1M output tokens"
+       }
+      ]
+     }
+    ]
+   },
+   "gemini-3.5-flash": {
+    "tiers": [
+     {
+      "title": "",
+      "criteria": [],
+      "prices": [
+       {
+        "price": 1.5e-06,
+        "metric": "input_tokens",
+        "unit": "input token",
+        "title": "$1.5 per 1M input tokens"
+       },
+       {
+        "price": 9e-06,
+        "metric": "output_tokens",
+        "unit": "output token",
+        "title": "$9.0 per 1M output tokens"
+       }
+      ]
+     }
+    ]
+   },
+   "gemini-3.5-flash-lite": {
+    "tiers": [
+     {
+      "title": "",
+      "criteria": [],
+      "prices": [
+       {
+        "price": 3e-07,
+        "metric": "input_tokens",
+        "unit": "input token",
+        "title": "$0.3 per 1M input tokens"
+       },
+       {
+        "price": 2.5e-06,
+        "metric": "output_tokens",
+        "unit": "output token",
+        "title": "$2.5 per 1M output tokens"
+       }
+      ]
+     }
+    ]
+   },
+   "gemini-3.1-pro-preview": {
+    "tiers": [
+     {
+      "title": "",
+      "criteria": [],
+      "prices": [
+       {
+        "price": 2e-06,
+        "metric": "input_tokens",
+        "unit": "input token",
+        "title": "$2.0 per 1M input tokens"
+       },
+       {
+        "price": 1.2e-05,
+        "metric": "output_tokens",
+        "unit": "output token",
+        "title": "$12.0 per 1M output tokens"
+       }
+      ]
+     }
+    ]
+   },
+   "gemini-3.1-pro-preview-customtools": {
+    "tiers": [
+     {
+      "title": "",
+      "criteria": [],
+      "prices": [
+       {
+        "price": 2e-06,
+        "metric": "input_tokens",
+        "unit": "input token",
+        "title": "$2.0 per 1M input tokens"
+       },
+       {
+        "price": 1.2e-05,
+        "metric": "output_tokens",
+        "unit": "output token",
+        "title": "$12.0 per 1M output tokens"
+       }
+      ]
+     }
+    ]
+   },
+   "gemini-3.1-flash-lite": {
+    "tiers": [
+     {
+      "title": "",
+      "criteria": [],
+      "prices": [
+       {
+        "price": 2.5e-07,
+        "metric": "input_tokens",
+        "unit": "input token",
+        "title": "$0.25 per 1M input tokens"
+       },
+       {
+        "price": 1.5e-06,
+        "metric": "output_tokens",
+        "unit": "output token",
+        "title": "$1.5 per 1M output tokens"
+       }
+      ]
+     }
+    ]
+   },
+   "gemini-3-pro-image": {
+    "tiers": [
+     {
+      "title": "1K",
+      "criteria": [
+       {
+        "title": "image size",
+        "value": "1K",
+        "subtype": "string",
+        "description": "1K"
+       }
+      ],
+      "prices": [
+       {
+        "price": 0.134,
+        "metric": "image_output_count",
+        "unit": "image",
+        "title": ""
+       }
+      ]
+     },
+     {
+      "title": "2K",
+      "criteria": [
+       {
+        "title": "image size",
+        "value": "2K",
+        "subtype": "string",
+        "description": "2K"
+       }
+      ],
+      "prices": [
+       {
+        "price": 0.134,
+        "metric": "image_output_count",
+        "unit": "image",
+        "title": ""
+       }
+      ]
+     },
+     {
+      "title": "4K",
+      "criteria": [
+       {
+        "title": "image size",
+        "value": "4K",
+        "subtype": "string",
+        "description": "4K"
+       }
+      ],
+      "prices": [
+       {
+        "price": 0.24,
+        "metric": "image_output_count",
+        "unit": "image",
+        "title": ""
+       }
+      ]
+     }
+    ]
+   },
+   "gemini-3.1-flash-image": {
+    "tiers": [
+     {
+      "title": "512px",
+      "criteria": [
+       {
+        "title": "image size",
+        "value": "512px",
+        "subtype": "string",
+        "description": "512px"
+       }
+      ],
+      "prices": [
+       {
+        "price": 0.045,
+        "metric": "image_output_count",
+        "unit": "image",
+        "title": ""
+       }
+      ]
+     },
+     {
+      "title": "1K",
+      "criteria": [
+       {
+        "title": "image size",
+        "value": "1K",
+        "subtype": "string",
+        "description": "1K"
+       }
+      ],
+      "prices": [
+       {
+        "price": 0.067,
+        "metric": "image_output_count",
+        "unit": "image",
+        "title": ""
+       }
+      ]
+     },
+     {
+      "title": "2K",
+      "criteria": [
+       {
+        "title": "image size",
+        "value": "2K",
+        "subtype": "string",
+        "description": "2K"
+       }
+      ],
+      "prices": [
+       {
+        "price": 0.101,
+        "metric": "image_output_count",
+        "unit": "image",
+        "title": ""
+       }
+      ]
+     },
+     {
+      "title": "4K",
+      "criteria": [
+       {
+        "title": "image size",
+        "value": "4K",
+        "subtype": "string",
+        "description": "4K"
+       }
+      ],
+      "prices": [
+       {
+        "price": 0.151,
+        "metric": "image_output_count",
+        "unit": "image",
+        "title": ""
+       }
+      ]
+     }
+    ]
+   },
+   "veo-3.1-generate-preview": {
+    "tiers": [
+     {
+      "title": "720p",
+      "criteria": [
+       {
+        "title": "resolution",
+        "value": "720p",
+        "subtype": "string",
+        "description": "720p"
+       }
+      ],
+      "prices": [
+       {
+        "price": 0.4,
+        "metric": "video_output_duration_seconds",
+        "unit": "second of video",
+        "title": ""
+       }
+      ]
+     },
+     {
+      "title": "1080p",
+      "criteria": [
+       {
+        "title": "resolution",
+        "value": "1080p",
+        "subtype": "string",
+        "description": "1080p"
+       }
+      ],
+      "prices": [
+       {
+        "price": 0.4,
+        "metric": "video_output_duration_seconds",
+        "unit": "second of video",
+        "title": ""
+       }
+      ]
+     },
+     {
+      "title": "4k",
+      "criteria": [
+       {
+        "title": "resolution",
+        "value": "4k",
+        "subtype": "string",
+        "description": "4k"
+       }
+      ],
+      "prices": [
+       {
+        "price": 0.6,
+        "metric": "video_output_duration_seconds",
+        "unit": "second of video",
+        "title": ""
+       }
+      ]
+     }
+    ]
+   },
+   "veo-3.1-fast-generate-preview": {
+    "tiers": [
+     {
+      "title": "720p",
+      "criteria": [
+       {
+        "title": "resolution",
+        "value": "720p",
+        "subtype": "string",
+        "description": "720p"
+       }
+      ],
+      "prices": [
+       {
+        "price": 0.1,
+        "metric": "video_output_duration_seconds",
+        "unit": "second of video",
+        "title": ""
+       }
+      ]
+     },
+     {
+      "title": "1080p",
+      "criteria": [
+       {
+        "title": "resolution",
+        "value": "1080p",
+        "subtype": "string",
+        "description": "1080p"
+       }
+      ],
+      "prices": [
+       {
+        "price": 0.12,
+        "metric": "video_output_duration_seconds",
+        "unit": "second of video",
+        "title": ""
+       }
+      ]
+     },
+     {
+      "title": "4k",
+      "criteria": [
+       {
+        "title": "resolution",
+        "value": "4k",
+        "subtype": "string",
+        "description": "4k"
+       }
+      ],
+      "prices": [
+       {
+        "price": 0.3,
+        "metric": "video_output_duration_seconds",
+        "unit": "second of video",
+        "title": ""
+       }
+      ]
+     }
+    ]
+   },
+   "veo-3.1-lite-generate-preview": {
+    "tiers": [
+     {
+      "title": "720p",
+      "criteria": [
+       {
+        "title": "resolution",
+        "value": "720p",
+        "subtype": "string",
+        "description": "720p"
+       }
+      ],
+      "prices": [
+       {
+        "price": 0.05,
+        "metric": "video_output_duration_seconds",
+        "unit": "second of video",
+        "title": ""
+       }
+      ]
+     },
+     {
+      "title": "1080p",
+      "criteria": [
+       {
+        "title": "resolution",
+        "value": "1080p",
+        "subtype": "string",
+        "description": "1080p"
+       }
+      ],
+      "prices": [
+       {
+        "price": 0.08,
+        "metric": "video_output_duration_seconds",
+        "unit": "second of video",
+        "title": ""
+       }
+      ]
+     }
+    ]
+   },
+   "gemini-3.8-flash-tts": {
+    "tiers": [
+     {
+      "title": "",
+      "criteria": [],
+      "prices": [
+       {
+        "price": 5e-07,
+        "metric": "input_tokens",
+        "unit": "input token",
+        "title": ""
+       },
+       {
+        "price": 9e-06,
+        "metric": "output_tokens",
+        "unit": "audio token",
+        "title": ""
+       }
+      ]
+     }
+    ]
+   },
+   "lyria-3.5": {
+    "tiers": [
+     {
+      "title": "",
+      "criteria": [],
+      "prices": [
+       {
+        "price": 0.08,
+        "metric": "",
+        "unit": "song",
+        "title": ""
+       }
+      ]
+     }
+    ]
+   },
+   "gemini-3.8-flash-lite-tts": {
+    "tiers": [
+     {
+      "title": "",
+      "criteria": [],
+      "prices": [
+       {
+        "price": 5e-07,
+        "metric": "input_tokens",
+        "unit": "input token",
+        "title": "$0.50 per 1M input (text) tokens"
+       },
+       {
+        "price": 6e-06,
+        "metric": "output_tokens",
+        "unit": "audio token",
+        "title": "$6.00 per 1M output (audio) tokens"
+       }
+      ]
+     }
+    ]
+   },
+   "gemini-2.5-pro-preview-tts": {
+    "tiers": [
+     {
+      "title": "",
+      "criteria": [],
+      "prices": [
+       {
+        "price": 1e-06,
+        "metric": "input_tokens",
+        "unit": "input token",
+        "title": "$1.00 per 1M input (text) tokens"
+       },
+       {
+        "price": 2e-05,
+        "metric": "output_tokens",
+        "unit": "audio token",
+        "title": "$20.00 per 1M output (audio) tokens"
+       }
+      ]
+     }
+    ],
+    "note": "from ai.google.dev/gemini-api/docs/pricing, checked 2026-10-05"
+   }
+  }
+ }
+}
